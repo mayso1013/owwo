@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>이모티콘</title>	<style>
+
+		body {
+
+			display: flex;
+
+			flex-direction: column;
+
+			align-items: center;
+
+			justify-content: center;
+
+			height: 100vh;
+
+			margin: 0;
+
+			padding: 0;
+
+		}
+
+		h2 {
+
+			margin-bottom: 30px;
+
+		}
+
+		input[type="password"] {
+
+			padding: 10px;
+
+			border: none;
+
+			border-radius: 5px;
+
+			box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+
+			margin-right: 10px;
+
+		}
+
+		button[type="submit"] {
+
+			padding: 10px;
+
+			border: none;
+
+			border-radius: 5px;
+
+			box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+
+			background-color: #FF0000;
+
+			color: #FFFFFF;
+
+			cursor: pointer;
+
+		}
+
+		button[type="submit"]:hover {
+
+			background-color: #990000;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<h2>관리자 코드를 입력하세요.</h2>
+
+	<form onsubmit="event.preventDefault(); sendLink();">
+
+		<input type="password" placeholder="관리자 코드를 입력하세요." id="admin_code">
+
+		<button type="submit">이동</button>
+
+	</form>
+
+	<script>
+
+		function sendLink() {
+
+			const adminCode = document.getElementById("admin_code").value;
+
+			if (adminCode === "이서현바보") {
+
+				window.location.href = "https://mayso1013.github.io/gift_004/";
+
+			} else {
+
+				alert("올바른 관리자 코드를 입력해주세요.");
+
+			}
+
+		}
+
+	</script>
+
+</body>
+
+</html>
